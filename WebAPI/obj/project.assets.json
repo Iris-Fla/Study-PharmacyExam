@@ -428,19 +428,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PCUser\\.nuget\\packages\\": {}
+    "C:\\Users\\ktc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programing\\Study-PharmacyExam\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\ktc\\Documents\\GitHub\\Study-PharmacyExam\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "D:\\Programing\\Study-PharmacyExam\\WebAPI\\WebAPI.csproj",
-      "packagesPath": "C:\\Users\\PCUser\\.nuget\\packages\\",
-      "outputPath": "D:\\Programing\\Study-PharmacyExam\\WebAPI\\obj\\",
+      "projectPath": "C:\\Users\\ktc\\Documents\\GitHub\\Study-PharmacyExam\\WebAPI\\WebAPI.csproj",
+      "packagesPath": "C:\\Users\\ktc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ktc\\Documents\\GitHub\\Study-PharmacyExam\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PCUser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ktc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -460,6 +460,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -490,7 +495,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
