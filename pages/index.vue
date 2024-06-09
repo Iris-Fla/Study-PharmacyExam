@@ -1,5 +1,5 @@
 <script setup>
-const { data } = await useFetch("/api/swag", {
+const { data } = await useFetch("/api/test", {
     method: "GET",
 });
 console.log(data);
