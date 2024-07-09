@@ -1,0 +1,6 @@
+@SqliteWebApiCoreDemo_HostAddress = http://localhost:5272
+
+GET {{SqliteWebApiCoreDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
