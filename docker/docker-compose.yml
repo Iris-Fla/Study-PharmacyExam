@@ -1,0 +1,13 @@
+version: "3"
+services:
+  nuxt-app:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - ../src:/app # ローカルディレクトリをコンテナの/appにマウント（コードの変更がリアルタイムで反映される）
+      - /app/node_modules # node_modulesはコンテナ内に留める
+    ports:
+      - "3000:3000" # ローカルのポート3000をコンテナのポート3000にマッピング
+    environment:
+      - HOST=0.0.0.0 # コンテナのホストアドレスを0.0.0.0に設定（外部からのアクセスを可能にする）
