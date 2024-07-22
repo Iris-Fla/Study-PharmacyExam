@@ -54,5 +54,27 @@ namespace SqliteWebApiCoreDemo.Controllers
             return result;
 
         }
+        /// <summary>
+        /// —X•Ö”Ô†‚©‚çZŠî•ñ‚ğæ“¾‚·‚éAPI
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("JpTodou",Name = "GetJpTodou")]
+        public IEnumerable<JpTodou> GetJpTodou()
+        {
+
+            using var connection = new SqliteConnection($@"Data Source={_env.ContentRootPath}\Database\kenall.db");
+
+            var sql = $$"""SELECT DISTINCT field7 AS "Œ§–¼" FROM prefacture_name""";
+            var parameters = new
+            {
+            };
+
+            var command = new CommandDefinition(sql);
+
+            var result = connection.Query<JpTodou>(command);
+
+            return result;
+
+        }
     }
 }

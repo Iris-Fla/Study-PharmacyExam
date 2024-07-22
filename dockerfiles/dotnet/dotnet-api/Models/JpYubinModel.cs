@@ -18,4 +18,8 @@
         public string 町域名カナ { get; set; } = string.Empty;
 
     }
+    public record JpTodou
+    {
+        public string 県名 { get; set; } = string.Empty;
+    }
 }
