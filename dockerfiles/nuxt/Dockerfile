@@ -1,4 +1,4 @@
-#Node.jsのイメージを使用
+#alpineを使用
 FROM node:22-alpine
 
 # # 作業ディレクトリを設定
@@ -9,6 +9,9 @@ COPY ./src/ /app/
 
 # # 依存関係をインストール
 RUN npm install
+
+EXPOSE 3000
+EXPOSE 24678
 
 # # アプリケーションを実行
 CMD ["npm", "run", "dev"]

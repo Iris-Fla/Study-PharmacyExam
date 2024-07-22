@@ -8,6 +8,11 @@ export default defineNuxtConfig({
 
   vite: {
     server: {
+      hmr: {
+        protocol: 'ws',
+        host: '0.0.0.0',
+        port: 24678,
+      },
       watch: {
         usePolling: true,
       },

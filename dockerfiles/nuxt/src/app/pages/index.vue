@@ -5,6 +5,6 @@ const { data } = await useFetch("/api/test", {
 console.log(data);
 </script>
 <template>
-    <h1>Hellao</h1>
+    <h1>Hellaaaaaaaaaaa</h1>
     <p>{{ data }}</p>
 </template>
