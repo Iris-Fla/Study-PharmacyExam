@@ -1,5 +1,22 @@
 version: '3'
+name: pharmacy-exam
 services:
+  nuxt-app:
+    build:
+      context: ./dockerfiles/nuxt
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+      - "24678:24678" # HMR用のポート
+    environment:
+      - HOST=0.0.0.0
+      - PORT=3000
+      - NITRO_HOST=0.0.0.0
+      - NITRO_PORT=3000
+      - CHOKIDAR_USEPOLLING=true
+          # depends_on:
+          #   - dotnet-api
+    #command: npm run dev
   # dotnet-api:
   #   build:
   #     context: ./dotnet
@@ -8,18 +25,3 @@ services:
   #     - "5000:80"
   #   environment:
   #     - ASPNETCORE_ENVIRONMENT=Development
-
-  nuxt-app:
-    build:
-      context: ./dockerfiles/nuxt
-      dockerfile: Dockerfile
-    ports:
-      - 3000:3000
-      - 24678:24678 # HMR用のポートを追加
-    environment:
-      - NODE_ENV=production
-      - HOST=0.0.0.0
-      - PORT=3000
-      - CHOKIDAR_USEPOLLING=true
-    # depends_on:
-    #   - dotnet-api

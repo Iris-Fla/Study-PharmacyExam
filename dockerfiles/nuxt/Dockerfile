@@ -1,19 +1,17 @@
-#alpineを使用
-FROM node:22-alpine
+FROM node:latest
 
-# # 作業ディレクトリを設定
 WORKDIR /app
 
-# # アプリケーションのソースコードをコピー
-COPY ./src/ /app/
+# package.json と package-lock.json (存在する場合) をコピー
+COPY ./src/package*.json ./
 
-# # 依存関係をインストール
+# 依存関係をインストール
 RUN npm install
 
-EXPOSE 3000
-EXPOSE 24678
+# その他のソースコードをコピー
+COPY ./src/ .
 
-# # アプリケーションを実行
+# Nuxt の開発サーバーを起動
 CMD ["npm", "run", "dev"]
 
 # # ビルドステージ
